@@ -40,7 +40,7 @@ namespace ExtremeZadatak.Controllers
 
             using (HttpClient client = new HttpClient())
             {
-                var key = "AIzaSyAnAFqi9EsYzMIivaONKTzTn3x5-Z-JHJo";
+                var key = "";
 
                 var response = await client.GetStringAsync(string.Format("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={0},{1}&radius={2}&type={3}&key={4}", latitude, longitude, radius, category, key));
                 return response;
